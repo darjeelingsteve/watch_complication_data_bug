@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48827D161C15AE2A00DA8FE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D151C15AE2A00DA8FE1 /* AppDelegate.swift */; };
+		48827D181C15AE2A00DA8FE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D171C15AE2A00DA8FE1 /* ViewController.swift */; };
+		48827D1B1C15AE2A00DA8FE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48827D191C15AE2A00DA8FE1 /* Main.storyboard */; };
+		48827D1D1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48827D1C1C15AE2A00DA8FE1 /* Assets.xcassets */; };
+		48827D201C15AE2A00DA8FE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48827D1E1C15AE2A00DA8FE1 /* LaunchScreen.storyboard */; };
+		48827D251C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 48827D241C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app */; };
+		48827D2B1C15AE2A00DA8FE1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48827D291C15AE2A00DA8FE1 /* Interface.storyboard */; };
+		48827D2D1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48827D2C1C15AE2A00DA8FE1 /* Assets.xcassets */; };
+		48827D341C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 48827D331C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		48827D391C15AE2A00DA8FE1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D381C15AE2A00DA8FE1 /* InterfaceController.swift */; };
+		48827D3B1C15AE2A00DA8FE1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D3A1C15AE2A00DA8FE1 /* ExtensionDelegate.swift */; };
+		48827D3D1C15AE2A00DA8FE1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D3C1C15AE2A00DA8FE1 /* ComplicationController.swift */; };
+		48827D3F1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48827D261C15AE2A00DA8FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48827D0A1C15AE2A00DA8FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48827D231C15AE2A00DA8FE1;
+			remoteInfo = "Watch Complication Data Bug WatchKit App";
+		};
+		48827D351C15AE2A00DA8FE1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48827D0A1C15AE2A00DA8FE1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48827D321C15AE2A00DA8FE1;
+			remoteInfo = "Watch Complication Data Bug WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48827D461C15AE2A00DA8FE1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				48827D341C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48827D4A1C15AE2A00DA8FE1 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				48827D251C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		48827D121C15AE2A00DA8FE1 /* Watch Complication Data Bug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Complication Data Bug.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48827D151C15AE2A00DA8FE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		48827D171C15AE2A00DA8FE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		48827D1A1C15AE2A00DA8FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		48827D1C1C15AE2A00DA8FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48827D1F1C15AE2A00DA8FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		48827D211C15AE2A00DA8FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48827D241C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Watch Complication Data Bug WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48827D2A1C15AE2A00DA8FE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		48827D2C1C15AE2A00DA8FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48827D2E1C15AE2A00DA8FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48827D331C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Watch Complication Data Bug WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		48827D381C15AE2A00DA8FE1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		48827D3A1C15AE2A00DA8FE1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		48827D3C1C15AE2A00DA8FE1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		48827D401C15AE2A00DA8FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48827D0F1C15AE2A00DA8FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48827D301C15AE2A00DA8FE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48827D091C15AE2A00DA8FE1 = {
+			isa = PBXGroup;
+			children = (
+				48827D141C15AE2A00DA8FE1 /* Watch Complication Data Bug */,
+				48827D281C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */,
+				48827D371C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */,
+				48827D131C15AE2A00DA8FE1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		48827D131C15AE2A00DA8FE1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48827D121C15AE2A00DA8FE1 /* Watch Complication Data Bug.app */,
+				48827D241C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app */,
+				48827D331C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48827D141C15AE2A00DA8FE1 /* Watch Complication Data Bug */ = {
+			isa = PBXGroup;
+			children = (
+				48827D151C15AE2A00DA8FE1 /* AppDelegate.swift */,
+				48827D171C15AE2A00DA8FE1 /* ViewController.swift */,
+				48827D191C15AE2A00DA8FE1 /* Main.storyboard */,
+				48827D1C1C15AE2A00DA8FE1 /* Assets.xcassets */,
+				48827D1E1C15AE2A00DA8FE1 /* LaunchScreen.storyboard */,
+				48827D211C15AE2A00DA8FE1 /* Info.plist */,
+			);
+			path = "Watch Complication Data Bug";
+			sourceTree = "<group>";
+		};
+		48827D281C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				48827D291C15AE2A00DA8FE1 /* Interface.storyboard */,
+				48827D2C1C15AE2A00DA8FE1 /* Assets.xcassets */,
+				48827D2E1C15AE2A00DA8FE1 /* Info.plist */,
+			);
+			path = "Watch Complication Data Bug WatchKit App";
+			sourceTree = "<group>";
+		};
+		48827D371C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				48827D381C15AE2A00DA8FE1 /* InterfaceController.swift */,
+				48827D3A1C15AE2A00DA8FE1 /* ExtensionDelegate.swift */,
+				48827D3C1C15AE2A00DA8FE1 /* ComplicationController.swift */,
+				48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */,
+				48827D401C15AE2A00DA8FE1 /* Info.plist */,
+			);
+			path = "Watch Complication Data Bug WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48827D111C15AE2A00DA8FE1 /* Watch Complication Data Bug */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48827D4B1C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug" */;
+			buildPhases = (
+				48827D0E1C15AE2A00DA8FE1 /* Sources */,
+				48827D0F1C15AE2A00DA8FE1 /* Frameworks */,
+				48827D101C15AE2A00DA8FE1 /* Resources */,
+				48827D4A1C15AE2A00DA8FE1 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48827D271C15AE2A00DA8FE1 /* PBXTargetDependency */,
+			);
+			name = "Watch Complication Data Bug";
+			productName = "Watch Complication Data Bug";
+			productReference = 48827D121C15AE2A00DA8FE1 /* Watch Complication Data Bug.app */;
+			productType = "com.apple.product-type.application";
+		};
+		48827D231C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48827D471C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug WatchKit App" */;
+			buildPhases = (
+				48827D221C15AE2A00DA8FE1 /* Resources */,
+				48827D461C15AE2A00DA8FE1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48827D361C15AE2A00DA8FE1 /* PBXTargetDependency */,
+			);
+			name = "Watch Complication Data Bug WatchKit App";
+			productName = "Watch Complication Data Bug WatchKit App";
+			productReference = 48827D241C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		48827D321C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48827D431C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug WatchKit Extension" */;
+			buildPhases = (
+				48827D2F1C15AE2A00DA8FE1 /* Sources */,
+				48827D301C15AE2A00DA8FE1 /* Frameworks */,
+				48827D311C15AE2A00DA8FE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Watch Complication Data Bug WatchKit Extension";
+			productName = "Watch Complication Data Bug WatchKit Extension";
+			productReference = 48827D331C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48827D0A1C15AE2A00DA8FE1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Darjeeling Apps";
+				TargetAttributes = {
+					48827D111C15AE2A00DA8FE1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					48827D231C15AE2A00DA8FE1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					48827D321C15AE2A00DA8FE1 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 48827D0D1C15AE2A00DA8FE1 /* Build configuration list for PBXProject "Watch Complication Data Bug" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 48827D091C15AE2A00DA8FE1;
+			productRefGroup = 48827D131C15AE2A00DA8FE1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48827D111C15AE2A00DA8FE1 /* Watch Complication Data Bug */,
+				48827D231C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */,
+				48827D321C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48827D101C15AE2A00DA8FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48827D201C15AE2A00DA8FE1 /* LaunchScreen.storyboard in Resources */,
+				48827D1D1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */,
+				48827D1B1C15AE2A00DA8FE1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48827D221C15AE2A00DA8FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48827D2D1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */,
+				48827D2B1C15AE2A00DA8FE1 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48827D311C15AE2A00DA8FE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48827D3F1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48827D0E1C15AE2A00DA8FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48827D181C15AE2A00DA8FE1 /* ViewController.swift in Sources */,
+				48827D161C15AE2A00DA8FE1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48827D2F1C15AE2A00DA8FE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48827D3B1C15AE2A00DA8FE1 /* ExtensionDelegate.swift in Sources */,
+				48827D391C15AE2A00DA8FE1 /* InterfaceController.swift in Sources */,
+				48827D3D1C15AE2A00DA8FE1 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48827D271C15AE2A00DA8FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48827D231C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */;
+			targetProxy = 48827D261C15AE2A00DA8FE1 /* PBXContainerItemProxy */;
+		};
+		48827D361C15AE2A00DA8FE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48827D321C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */;
+			targetProxy = 48827D351C15AE2A00DA8FE1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48827D191C15AE2A00DA8FE1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48827D1A1C15AE2A00DA8FE1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		48827D1E1C15AE2A00DA8FE1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48827D1F1C15AE2A00DA8FE1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		48827D291C15AE2A00DA8FE1 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48827D2A1C15AE2A00DA8FE1 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48827D411C15AE2A00DA8FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		48827D421C15AE2A00DA8FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48827D441C15AE2A00DA8FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Watch Complication Data Bug WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		48827D451C15AE2A00DA8FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Watch Complication Data Bug WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		48827D481C15AE2A00DA8FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Watch_Complication_Data_Bug_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch Complication Data Bug WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		48827D491C15AE2A00DA8FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Watch_Complication_Data_Bug_WatchKit_Extension;
+				INFOPLIST_FILE = "Watch Complication Data Bug WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		48827D4C1C15AE2A00DA8FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Watch Complication Data Bug/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		48827D4D1C15AE2A00DA8FE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Watch Complication Data Bug/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darjeeling.Watch-Complication-Data-Bug";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48827D0D1C15AE2A00DA8FE1 /* Build configuration list for PBXProject "Watch Complication Data Bug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48827D411C15AE2A00DA8FE1 /* Debug */,
+				48827D421C15AE2A00DA8FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48827D431C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48827D441C15AE2A00DA8FE1 /* Debug */,
+				48827D451C15AE2A00DA8FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48827D471C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48827D481C15AE2A00DA8FE1 /* Debug */,
+				48827D491C15AE2A00DA8FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		48827D4B1C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48827D4C1C15AE2A00DA8FE1 /* Debug */,
+				48827D4D1C15AE2A00DA8FE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48827D0A1C15AE2A00DA8FE1 /* Project object */;
+}
