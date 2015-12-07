@@ -7,20 +7,34 @@
 //
 
 import WatchKit
+import WatchConnectivity
+import ClockKit
 
-class ExtensionDelegate: NSObject, WKExtensionDelegate {
-
+class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
+    let session = WCSession.defaultSession()
+    
     func applicationDidFinishLaunching() {
-        // Perform any final initialization of your application.
+        session.delegate = self
+        session.activateSession()
     }
-
-    func applicationDidBecomeActive() {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
+    func sendIncrementMessage() {
+        self.session.sendMessage([ActionKey : IncrementAction], replyHandler: nil, errorHandler: nil)
     }
-
-    func applicationWillResignActive() {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, etc.
+    
+    //MARK WCSessionDelegate
+    func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
+        guard let counter = userInfo[CounterUserInfoKey] as? Int else {
+            // Invalid payload
+            return
+        }
+        
+        NSUserDefaults.standardUserDefaults().setInteger(counter, forKey: ComplicationControllerCounterDefaultsKey)
+        
+        // Update the user's complications.
+        let complicationServer = CLKComplicationServer.sharedInstance()
+        for complication in complicationServer.activeComplications {
+            complicationServer.reloadTimelineForComplication(complication)
+        }
     }
-
 }

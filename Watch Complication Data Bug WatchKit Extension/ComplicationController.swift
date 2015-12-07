@@ -8,21 +8,22 @@
 
 import ClockKit
 
+let ComplicationControllerCounterDefaultsKey = "ComplicationControllerCounterDefaultsKey"
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Timeline Configuration
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
-        handler([.Forward, .Backward])
+        handler([.None])
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        handler(NSDate())
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        handler(NSDate())
     }
     
     func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
@@ -33,7 +34,9 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         // Call the handler with the current timeline entry
-        handler(nil)
+        let template = templateForComplication(complication, counter: NSUserDefaults.standardUserDefaults().integerForKey(ComplicationControllerCounterDefaultsKey))
+        let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
+        handler(timelineEntry)
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
@@ -57,7 +60,39 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getPlaceholderTemplateForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
-        handler(nil)
+        handler(templateForComplication(complication, counter: nil))
     }
     
+    private func templateForComplication(complication: CLKComplication, counter: Int?) -> CLKComplicationTemplate {
+        let complicationTemplate: CLKComplicationTemplate
+        
+        switch complication.family {
+        case .ModularSmall:
+            let template = CLKComplicationTemplateModularSmallSimpleText()
+            template.textProvider = textProviderWithNumber(counter)
+            complicationTemplate = template
+        case .ModularLarge:
+            let template = CLKComplicationTemplateModularLargeTallBody()
+            template.headerTextProvider = CLKSimpleTextProvider(text: "Counter")
+            template.bodyTextProvider = textProviderWithNumber(counter)
+            complicationTemplate = template
+        case .UtilitarianSmall:
+            let template = CLKComplicationTemplateUtilitarianSmallFlat()
+            template.textProvider = textProviderWithNumber(counter)
+            complicationTemplate = template
+        case .UtilitarianLarge:
+            let template = CLKComplicationTemplateUtilitarianLargeFlat()
+            template.textProvider = textProviderWithNumber(counter)
+            complicationTemplate = template
+        case .CircularSmall:
+            let template = CLKComplicationTemplateCircularSmallSimpleText()
+            template.textProvider = textProviderWithNumber(counter)
+            complicationTemplate = template
+        }
+        return complicationTemplate
+    }
+    
+    private func textProviderWithNumber(number: Int?) -> CLKTextProvider {
+        return CLKSimpleTextProvider(text: (number != nil) ? String(number!) : "--")
+    }
 }

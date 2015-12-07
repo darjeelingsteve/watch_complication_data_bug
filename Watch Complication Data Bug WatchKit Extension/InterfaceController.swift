@@ -11,21 +11,11 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
-
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    @IBAction func incrementButtonTapped() {
+        guard let extensionDelegate = WKExtension.sharedExtension().delegate as? ExtensionDelegate else {
+            return
+        }
         
-        // Configure interface objects here.
+        extensionDelegate.sendIncrementMessage()
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-
 }

@@ -9,17 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet private weak var counterLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.configureCounterLabel()
+        NSNotificationCenter.defaultCenter().addObserverForName(AppDelegateDidUpdateCounterNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (_) -> Void in
+            self.configureCounterLabel()
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func configureCounterLabel() {
+        counterLabel.text = String(NSUserDefaults.standardUserDefaults().integerForKey(ComplicationDataBugCounterDefaultsKey))
     }
-
-
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 }
 

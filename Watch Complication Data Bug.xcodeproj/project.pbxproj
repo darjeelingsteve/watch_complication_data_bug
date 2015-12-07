@@ -20,6 +20,8 @@
 		48827D3B1C15AE2A00DA8FE1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D3A1C15AE2A00DA8FE1 /* ExtensionDelegate.swift */; };
 		48827D3D1C15AE2A00DA8FE1 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D3C1C15AE2A00DA8FE1 /* ComplicationController.swift */; };
 		48827D3F1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */; };
+		48827D501C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */; };
+		48827D511C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		48827D3C1C15AE2A00DA8FE1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48827D401C15AE2A00DA8FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunicationKeys.swift; path = Shared/CommunicationKeys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,7 @@
 				48827D141C15AE2A00DA8FE1 /* Watch Complication Data Bug */,
 				48827D281C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit App */,
 				48827D371C15AE2A00DA8FE1 /* Watch Complication Data Bug WatchKit Extension */,
+				48827D4E1C15BACC00DA8FE1 /* Shared */,
 				48827D131C15AE2A00DA8FE1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -155,6 +159,14 @@
 				48827D401C15AE2A00DA8FE1 /* Info.plist */,
 			);
 			path = "Watch Complication Data Bug WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		48827D4E1C15BACC00DA8FE1 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */,
+			);
+			name = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +303,7 @@
 			files = (
 				48827D181C15AE2A00DA8FE1 /* ViewController.swift in Sources */,
 				48827D161C15AE2A00DA8FE1 /* AppDelegate.swift in Sources */,
+				48827D501C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48827D511C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */,
 				48827D3B1C15AE2A00DA8FE1 /* ExtensionDelegate.swift in Sources */,
 				48827D391C15AE2A00DA8FE1 /* InterfaceController.swift in Sources */,
 				48827D3D1C15AE2A00DA8FE1 /* ComplicationController.swift in Sources */,
