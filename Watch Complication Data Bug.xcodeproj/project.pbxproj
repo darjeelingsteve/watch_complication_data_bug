@@ -22,6 +22,7 @@
 		48827D3F1C15AE2A00DA8FE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */; };
 		48827D501C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */; };
 		48827D511C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */; };
+		48C2BD311C1893DE00DC5F84 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C2BD301C1893DE00DC5F84 /* Counter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		48827D3E1C15AE2A00DA8FE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48827D401C15AE2A00DA8FE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48827D4F1C15BAEA00DA8FE1 /* CommunicationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommunicationKeys.swift; path = Shared/CommunicationKeys.swift; sourceTree = "<group>"; };
+		48C2BD301C1893DE00DC5F84 /* Counter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			children = (
 				48827D151C15AE2A00DA8FE1 /* AppDelegate.swift */,
 				48827D171C15AE2A00DA8FE1 /* ViewController.swift */,
+				48C2BD301C1893DE00DC5F84 /* Counter.swift */,
 				48827D191C15AE2A00DA8FE1 /* Main.storyboard */,
 				48827D1C1C15AE2A00DA8FE1 /* Assets.xcassets */,
 				48827D1E1C15AE2A00DA8FE1 /* LaunchScreen.storyboard */,
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48C2BD311C1893DE00DC5F84 /* Counter.swift in Sources */,
 				48827D181C15AE2A00DA8FE1 /* ViewController.swift in Sources */,
 				48827D161C15AE2A00DA8FE1 /* AppDelegate.swift in Sources */,
 				48827D501C15BAEA00DA8FE1 /* CommunicationKeys.swift in Sources */,
@@ -545,6 +549,7 @@
 				48827D451C15AE2A00DA8FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48827D471C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +558,7 @@
 				48827D491C15AE2A00DA8FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		48827D4B1C15AE2A00DA8FE1 /* Build configuration list for PBXNativeTarget "Watch Complication Data Bug" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +567,7 @@
 				48827D4D1C15AE2A00DA8FE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

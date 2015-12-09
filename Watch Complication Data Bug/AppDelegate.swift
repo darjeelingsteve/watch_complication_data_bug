@@ -9,9 +9,6 @@
 import UIKit
 import WatchConnectivity
 
-let ComplicationDataBugCounterDefaultsKey = "ComplicationDataBugCounterDefaultsKey"
-let AppDelegateDidUpdateCounterNotification = "AppDelegateDidUpdateCounterNotification"
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     var window: UIWindow?
@@ -30,13 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
         
         // Increment the current count
-        var counter = NSUserDefaults.standardUserDefaults().integerForKey(ComplicationDataBugCounterDefaultsKey)
-        ++counter
-        NSUserDefaults.standardUserDefaults().setInteger(counter, forKey: ComplicationDataBugCounterDefaultsKey)
-        NSNotificationCenter.defaultCenter().postNotificationName(AppDelegateDidUpdateCounterNotification, object: self)
+        Counter.sharedCounter.increment()
         
         // Send updated complication data
-        self.session.transferCurrentComplicationUserInfo([CounterUserInfoKey : counter])
+        self.session.transferCurrentComplicationUserInfo([CounterUserInfoKey : Counter.sharedCounter.value])
     }
     
     func session(session: WCSession, didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {

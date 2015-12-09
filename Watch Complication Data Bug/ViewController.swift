@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureCounterLabel()
-        NSNotificationCenter.defaultCenter().addObserverForName(AppDelegateDidUpdateCounterNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (_) -> Void in
+        NSNotificationCenter.defaultCenter().addObserverForName(CounterValueDidChangeNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (_) -> Void in
             self.configureCounterLabel()
         }
     }
     
     func configureCounterLabel() {
-        counterLabel.text = String(NSUserDefaults.standardUserDefaults().integerForKey(ComplicationDataBugCounterDefaultsKey))
+        counterLabel.text = String(Counter.sharedCounter.value)
     }
     
     deinit {
