@@ -19,7 +19,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     }
     
     func sendIncrementMessage() {
-        self.session.sendMessage([ActionKey : IncrementAction], replyHandler: nil, errorHandler: nil)
+        session.sendMessage([ActionKey : IncrementAction], replyHandler: nil, errorHandler: nil)
     }
     
     //MARK WCSessionDelegate

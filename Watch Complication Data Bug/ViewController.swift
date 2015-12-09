@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureCounterLabel()
+        configureCounterLabel()
         NSNotificationCenter.defaultCenter().addObserverForName(CounterValueDidChangeNotification, object: nil, queue: NSOperationQueue.mainQueue()) { (_) -> Void in
             self.configureCounterLabel()
         }

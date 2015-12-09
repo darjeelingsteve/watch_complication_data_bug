@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         Counter.sharedCounter.increment()
         
         // Send updated complication data
-        self.session.transferCurrentComplicationUserInfo([CounterUserInfoKey : Counter.sharedCounter.value])
+        session.transferCurrentComplicationUserInfo([CounterUserInfoKey : Counter.sharedCounter.value])
     }
     
     func session(session: WCSession, didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {
