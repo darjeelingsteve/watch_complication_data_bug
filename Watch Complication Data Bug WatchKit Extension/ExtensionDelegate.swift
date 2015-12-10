@@ -24,7 +24,15 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
     
     //MARK WCSessionDelegate
     func session(session: WCSession, didReceiveUserInfo userInfo: [String : AnyObject]) {
-        guard let counter = userInfo[CounterUserInfoKey] as? Int else {
+        updateComplicationsWithDictionary(userInfo)
+    }
+    
+    func session(session: WCSession, didReceiveApplicationContext applicationContext: [String : AnyObject]) {
+        updateComplicationsWithDictionary(applicationContext)
+    }
+    
+    private func updateComplicationsWithDictionary(dictionary: [String : AnyObject]) {
+        guard let counter = dictionary[CounterUserInfoKey] as? Int else {
             // Invalid payload
             return
         }

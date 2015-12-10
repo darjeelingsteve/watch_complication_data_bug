@@ -30,7 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         Counter.sharedCounter.increment()
         
         // Send updated complication data
-        session.transferCurrentComplicationUserInfo([CounterUserInfoKey : Counter.sharedCounter.value])
+        let complicationData = [CounterUserInfoKey : Counter.sharedCounter.value]
+        if (UIApplication.sharedApplication().applicationState == .Active) {
+            session.transferCurrentComplicationUserInfo(complicationData)
+        }
+        else {
+            do {
+                try session.updateApplicationContext(complicationData)
+            }
+            catch {
+                print("An error occurred \(error)")
+            }
+        }
     }
     
     func session(session: WCSession, didFinishUserInfoTransfer userInfoTransfer: WCSessionUserInfoTransfer, error: NSError?) {
