@@ -8,9 +8,19 @@
 
 import ClockKit
 
-let ComplicationControllerCounterDefaultsKey = "ComplicationControllerCounterDefaultsKey"
+/// The user defaults key used to store the current counter value.
+private let ComplicationControllerCounterDefaultsKey = "ComplicationControllerCounterDefaultsKey"
 
+/// The object responsible for providing complication data.
 class ComplicationController: NSObject, CLKComplicationDataSource {
+    class var counterValue: Int {
+        get {
+            return NSUserDefaults.standardUserDefaults().integerForKey(ComplicationControllerCounterDefaultsKey)
+        }
+        set {
+            NSUserDefaults.standardUserDefaults().setInteger(newValue, forKey: ComplicationControllerCounterDefaultsKey)
+        }
+    }
     
     // MARK: - Timeline Configuration
     
@@ -34,7 +44,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
         // Call the handler with the current timeline entry
-        let template = templateForComplication(complication, counter: NSUserDefaults.standardUserDefaults().integerForKey(ComplicationControllerCounterDefaultsKey))
+        let template = templateForComplication(complication, counter: ComplicationController.counterValue)
         let timelineEntry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
         handler(timelineEntry)
     }

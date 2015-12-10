@@ -29,7 +29,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate, WCSessionDelegate {
             return
         }
         
-        NSUserDefaults.standardUserDefaults().setInteger(counter, forKey: ComplicationControllerCounterDefaultsKey)
+        ComplicationController.counterValue = counter
         
         // Update the user's complications.
         let complicationServer = CLKComplicationServer.sharedInstance()
